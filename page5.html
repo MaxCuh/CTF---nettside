@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Mission Complete</title>
+    <link rel="stylesheet" href="page5.css">
+</head>
+<body>
+    <main class="overlay">
+        <div class="box">
+            <h1>GRATULERER, AGENT</h1>
+            <p class="sub">Du fant flagget.</p>
+            <div class="actions">
+                <a href="index.html">Back to Homepage</a>
+            </div>
+        </div>
+        <div id="confetti" class="confetti-container" aria-hidden="true"></div>
+    </main>
+
+    <audio id="fanfare" src="fanfare.mp3" preload="auto"></audio>
+
+    <script>
+
+    const flag = (sessionStorage.getItem('ctfFlag')) || "NO FLAG FOUND";
+    document.getElementById('flag').textContent = flag;
+
+    try { document.getElementById('fanfare').play().catch(()=>{}); } catch(e){}
+
+    const confetti = document.getElementById('confetti');
+    const colors = ['#ff3b3b','#ffd23f','#4ee1a0','#6ec1ff','#c689ff'];
+    for (let i=0;i<60;i++) {
+        const e = document.createElement('div');
+        e.className = 'p';
+        e.style.left = Math.random()*100 + '%';
+        e.style.background = colors[i % colors.length];
+        e.style.animationDelay = (Math.random()*1.2) + 's';
+        confetti.appendChild(e);
+    }
+</body>
+</html>

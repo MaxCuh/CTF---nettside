@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="page4.css">
+    <script src="page4.js" defer></script>
+    <title>Page 4</title>
+</head>
+<body>
+    <h1>Welcome Agent 007</h1>
+    <p>Tonight's mission:</p>
+    <p>Find and verify the secret message behind the image to gain access to classified CIA files.</p>
+    
+    <img src="secret-image.jpg" alt="Secret Image" id="secret-image" style="max-width: 25%; height: auto; cursor: pointer;">
+
+    <div id="message-container" style="display: none; text-align: center; margin-top: 20px;">
+        <p>Hemmelig melding: <span id="secret-message"></span></p>
+    </div>
+
+    <div id="answer-box" style="text-align:center; margin-top:20px;">
+        <input id="final-input" type="text" placeholder="Skriv her" style="width:80%;max-width:600px;padding:8px;">
+        <button id="final-submit" style="margin-left:8px;padding:8px 12px;">Submit</button>
+    </div>
+</body>
+</html>
