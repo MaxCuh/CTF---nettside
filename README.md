@@ -10,6 +10,7 @@
 CTF-en inneholder:
 - Flere sider / challenges
 - Enkle web-baserte oppgaver
-- Fokus på logikk, kildekode og problemløsning -(TIPS: bruk en base64 decoder nettside)
+- Fokus på logikk, kildekode og problemløsning
+TIPS: bruk en base64 decoder nettside
 
 
